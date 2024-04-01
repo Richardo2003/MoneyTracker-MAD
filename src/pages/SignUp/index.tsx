@@ -1,4 +1,10 @@
-import {StyleSheet, View, ScrollView, Text} from 'react-native';
+import {
+  StyleSheet,
+  View,
+  ScrollView,
+  Text,
+  TouchableOpacity,
+} from 'react-native';
 import React from 'react';
 import {Button, Gap, PageHeader, TextInput} from '../../components';
 
@@ -9,20 +15,21 @@ const SignUp = ({navigation}) => {
         <PageHeader
           label="Sign Up"
           backButton={true}
-          backButton={() => navigation.goBack()}
+          onPress={() => navigation.goBack()}
         />
         <Gap height={24} />
         <View style={styles.contentWrapper}>
           <View style={styles.avatarWrapper}>
             <View style={styles.border}>
               <View style={styles.addPhoto}>
-                <Text style={styles.addPhotoText}>Add Photo</Text>
+                <TouchableOpacity>
+                  <Text style={styles.addPhotoLabel}>Add Photo</Text>
+                </TouchableOpacity>
               </View>
             </View>
           </View>
           <Gap height={26} />
           <TextInput label="Full Name" placeholder="Type your full name" />
-
           <Gap height={16} />
           <TextInput
             label="Email Address"
@@ -34,7 +41,7 @@ const SignUp = ({navigation}) => {
           <Gap height={24} />
           <Button
             label="Continue"
-            onPress={() => navigation.navigate('SignUpPhoto')}
+            onPress={() => navigation.navigate('SignIn')}
           />
         </View>
       </View>
@@ -61,7 +68,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: 90,
   },
-  addPhotoText: {
+  addPhotoLabel: {
     fontSize: 14,
     fontFamily: 'Poppins-Light',
     maxWidth: 40,
@@ -83,18 +90,3 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
 });
-
-// import {StyleSheet, Text, View} from 'react-native';
-// import React from 'react';
-
-// const SignUp = () => {
-//   return (
-//     <View>
-//       <Text>SignUp</Text>
-//     </View>
-//   );
-// };
-
-// export default SignUp;
-
-// const styles = StyleSheet.create({});

@@ -1,6 +1,6 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {SplashScreen, SignIn, SignUp} from '../pages';
+import {SplashScreen, SignIn, SignUp, HomePage, CashOnBank} from '../pages';
 
 const Stack = createNativeStackNavigator();
 const index = () => {
@@ -19,7 +19,17 @@ const index = () => {
       <Stack.Screen
         name="SignUp"
         component={SignUp}
-        options={{headerShown: true}}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="HomePage"
+        component={HomePage}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="CashOnBank"
+        component={CashOnBank}
+        options={{headerShown: false}}
       />
     </Stack.Navigator>
   );

@@ -9,6 +9,7 @@ const SignIn = ({navigation}) => {
       <Gap height={24} />
       <View style={styles.contentWrapper}>
         <Gap height={26} />
+
         <TextInput
           label="Email Address"
           placeholder="Type your email address"
@@ -16,7 +17,10 @@ const SignIn = ({navigation}) => {
         <Gap height={16} />
         <TextInput label="Password" placeholder="Type your password" />
         <Gap height={24} />
-        <Button label="Sign In" />
+        <Button
+          label="Sign In"
+          onPress={() => navigation.navigate('HomePage')}
+        />
         <Gap height={12} />
         <Button
           label="Add New Account"
