@@ -8,10 +8,10 @@ import {
   Transaction,
 } from '../../components';
 
-const CashOnBank = ({navigation}) => {
+const CashOnHand = ({navigation}) => {
   const lastTransactions = [
     {
-      date: '18 April 2020',
+      date: '17 April 2020',
       description: 'Water, Food',
       amount: '-Rp. 300.000',
     },
@@ -40,22 +40,12 @@ const CashOnBank = ({navigation}) => {
       description: 'Top Up',
       amount: '+Rp. 300.000',
     },
-    {
-      date: '19 April 2020',
-      description: 'Top Up',
-      amount: '+Rp. 300.000',
-    },
-    {
-      date: '19 April 2020',
-      description: 'Top Up',
-      amount: '+Rp. 300.000',
-    },
   ];
 
   return (
     <View style={styles.container}>
       <PageHeader
-        label="CashOnBank"
+        label="CashOnHand"
         backButton={true}
         onPress={() => navigation.goBack()}
       />
@@ -68,7 +58,6 @@ const CashOnBank = ({navigation}) => {
         <Gap height={24} />
         <Button label="Save" onPress={() => navigation.navigate('HomePage')} />
         <Gap height={80} />
-
         <Text style={styles.titletransaction}>Last 3 Transactions</Text>
         <Gap height={30} />
 
@@ -87,7 +76,7 @@ const CashOnBank = ({navigation}) => {
   );
 };
 
-export default CashOnBank;
+export default CashOnHand;
 
 const styles = StyleSheet.create({
   container: {
@@ -109,25 +98,5 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: 'black',
     fontFamily: 'Poppins-Medium',
-  },
-  heading: {
-    fontSize: 18,
-    fontWeight: '600',
-    marginBottom: 13,
-  },
-  card: {
-    backgroundColor: 'white',
-    borderRadius: 8,
-    paddingVertical: 45,
-    paddingHorizontal: 25,
-    width: '100%',
-    marginVertical: 10,
-  },
-  shadowProp: {
-    elevation: 5, // untuk Android
-    shadowColor: '#000',
-    shadowOffset: {width: 0, height: 2},
-    shadowOpacity: 0.2,
-    shadowRadius: 4,
   },
 });

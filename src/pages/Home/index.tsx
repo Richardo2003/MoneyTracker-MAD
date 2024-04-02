@@ -18,7 +18,7 @@ const HomePage = ({navigation}) => {
         </View>
         <View style={styles.cashOn}>
           <Text style={styles.cashOnStyle2}>Cash On Bank </Text>
-          <Text style={styles.cashOnMoney2}> Rp. 6.000.000</Text>
+          <Text style={styles.cashOnMoney2}>Rp. 6.000.000</Text>
         </View>
         <Gap height={24} />
       </View>
